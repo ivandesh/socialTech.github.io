@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?1pe9dw");
+  src: url("../fonts/icomoon/icomoon.eot?1pe9dw#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?1pe9dw") format("truetype"), url("../fonts/icomoon/icomoon.woff?1pe9dw") format("woff"), url("../fonts/icomoon/icomoon.svg?1pe9dw#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+  content: "\e90b";
+}
+
+.icon-body:before {
+  content: "\e900";
+}
+
+.icon-baby:before {
+  content: "\e901";
+}
+
+.icon-ruler:before {
+  content: "\e902";
+}
+
+.icon-heart:before {
+  content: "\e903";
+}
+
+.icon-gender:before {
+  content: "\e904";
+}
+
+.icon-wine:before {
+  content: "\e905";
+}
+
+.icon-relationships:before {
+  content: "\e906";
+}
+
+.icon-smoke:before {
+  content: "\e907";
+}
+
+.icon-religion:before {
+  content: "\e908";
+}
+
+.icon-hair:before {
+  content: "\e909";
+}
+
+.icon-weight:before {
+  content: "\e90a";
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow-x: hidden;
+}
+
+.slider.swiper-container-horizontal > .swiper-pagination-bullets {
+  position: absolute;
+  bottom: 45px;
+  width: calc(100% - 32px);
+  padding: 0 16px;
+  z-index: 2;
+}
+
+.slider.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: calc(12.5% - 4px);
+  height: 4px;
+  margin-left: 0;
+  margin-right: 4px;
+  border-radius: 0;
+  background-color: #fff;
+  opacity: .6;
+}
+
+.slider.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:first-child {
+  border-radius: 2px 0 0 2px;
+}
+
+.slider.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+  border-radius: 0 2px 2px 0;
+}
+
+.slider.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.slider .swiper-slide {
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  min-height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  cursor: pointer;
+}
+
+.btn-bordered {
+  width: 100%;
+  margin: 36px 0 24px;
+  padding: 13px;
+  border: 1px solid #848484;
+  border-radius: 8px;
+  background: #fff;
+  color: #848484;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.btn-bordered:hover, .btn-bordered:focus {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-like {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  color: #D8CBF9;
+  font-size: 23px;
+  line-height: 20px;
+}
+
+.btn-like:hover, .btn-like:focus {
+  color: #EA3C53;
+}
+
+.back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-info {
+  position: relative;
+  top: -38px;
+  padding: 16px;
+  border-radius: 10px 10px 0 0;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.name p {
+  margin: 0 8px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+}
+
+.name .online {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #10B56B;
+  border-radius: 50%;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.badges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.badges .badges__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: cetner;
+      -ms-flex-align: cetner;
+          align-items: cetner;
+  padding: 6px 12px;
+  margin: 0 8px 8px 0;
+  border-radius: 8px;
+  background-color: #F4F4F4;
+  color: #848484;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.badges .badges__item.active {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.badges .badges__item:hover, .badges .badges__item:focus {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.badges .badges__item .icon {
+  margin-right: 8px;
+  line-height: 18px;
+}
+
+.badges.secondary {
+  padding-left: 2px;
+}
+
+.badges.secondary .badges__item {
+  margin: 0 4px 8px;
+}
+
+.extend-info-title {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.info-item {
+  margin-top: 16px;
+}
+
+.info-item.secondary {
+  margin-top: 17px;
+}
+
+.info-item.secondary h4 {
+  margin-bottom: 7px;
+  margin-left: 2px;
+}
+
+.info-item h4 {
+  color: #848484;
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.info-item img {
+  width: 20px;
+  margin-right: 12px;
+  margin-top: 2px;
+}
